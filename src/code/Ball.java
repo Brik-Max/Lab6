@@ -42,7 +42,7 @@ public class Ball extends Thread{
             if(x <= 0){ xdir = +1;}
             if(y < panel.getHeight() - size){ ydir = -1;}
             if(y <= 0){ ydir = +1;}
-            //if(x == 0 && y == 0) { x = panel.getWidth() - size; y = panel.getHeight() - size;}
+
 
 
             x += xdir * step;
