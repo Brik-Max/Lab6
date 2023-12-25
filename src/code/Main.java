@@ -34,5 +34,6 @@ public class Main {
         ball2.start();
         ball3.start();
         ball4.start();
+        //Опять коммит
     }
 }
