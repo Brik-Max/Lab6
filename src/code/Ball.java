@@ -7,7 +7,7 @@ public class Ball extends Thread {
     private JPanel panel;
     private int step;
 
-    private Direction direction;
+    private Direction direction = new Direction();
 
     private int size;
     private int x0;
@@ -19,8 +19,8 @@ public class Ball extends Thread {
         this.size = size;
         this.x0 = x0;
         this.y0 = y0;
-        direction.dir1 = Direction.Up;
-        direction.dir2 = Direction.Left;
+        direction.dir1 = Direction.Right;
+        direction.dir2 = Direction.Down;
     }
 
     @Override
@@ -33,25 +33,38 @@ public class Ball extends Thread {
         panel.setBackground(Color.GRAY);
         Graphics gr = panel.getGraphics();
         while(true){
+
             gr.setColor(Color.WHITE);
-            gr.drawOval(x,y,size,size);
-            try{
+            gr.drawOval(x, y, size, size);
+            try {
                 Thread.sleep(20);
-            }catch (InterruptedException e){
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             gr.setColor(Color.GRAY);
-            gr.drawOval(x,y,size,size);
+            gr.drawOval(x, y, size, size);
 
-            if(x < panel.getWidth() - size){ xdir = -1;}
-            if(x <= 0){ xdir = +1;}
-            if(y < panel.getHeight() - size){ ydir = -1;}
-            if(y <= 0){ ydir = +1;}
+            if (x < 0 && direction.dir1 == Direction.Left) {
+                xdir = +1;
+                direction.dir1 = Direction.Right;
+            }
+            if (x > panel.getWidth() - size && direction.dir1 == Direction.Right) {
+                xdir = -1;
+                direction.dir1 = Direction.Left;
+            }
 
-
+            if (y < 0 && direction.dir2 == Direction.Up) {
+                ydir = +1;
+                direction.dir2 = Direction.Down;
+            }
+            if (y > panel.getHeight() - size && direction.dir2 == Direction.Down) {
+                ydir = -1;
+                direction.dir2 = Direction.Up;
+            }
 
             x += xdir * step;
             y += ydir * step;
+            panel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         }
     }
 
