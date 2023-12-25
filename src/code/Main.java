@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Main {
+    // -amend
     public static void main(String[] args) {
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -25,10 +26,10 @@ public class Main {
         frame.setVisible(true);
         //Коммит новой ветки
 
-        Ball ball1 = new Ball(panel1,1,50,150,250);
-        Ball ball2 = new Ball(panel2,2,10,120,320);
-        Ball ball3 = new Ball(panel3,3,20,110,310);
-        Ball ball4 = new Ball(panel4,4,20,110,210);
+        Ball ball1 = new Ball(panel1, 1, 10, 15, 15);
+        Ball ball2 = new Ball(panel2, 2, 20, 15, 25);
+        Ball ball3 = new Ball(panel3, 3, 40, 25, 35);
+        Ball ball4 = new Ball(panel4, 4, 80, 35, 35);
         //новая строка
         ball1.start();
         ball2.start();
