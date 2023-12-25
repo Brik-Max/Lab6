@@ -3,19 +3,24 @@ package code;
 import javax.swing.*;
 import java.awt.*;
 
-public class Ball extends Thread{
+public class Ball extends Thread {
     private JPanel panel;
     private int step;
+
+    private Direction direction;
+
     private int size;
     private int x0;
     private int y0;
 
-    public Ball(JPanel panel, int step, int size, int x0, int y0){
+    public Ball(JPanel panel, int step, int size, int x0, int y0) {
         this.panel = panel;
         this.step = step;
         this.size = size;
         this.x0 = x0;
         this.y0 = y0;
+        direction.dir1 = Direction.Up;
+        direction.dir2 = Direction.Left;
     }
 
     @Override

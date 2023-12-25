@@ -4,12 +4,13 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Main {
+    // Новая фича (Новая ветка)
     public static void main(String[] args) {
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(800,800);
-        frame.setLocation(200,200);
-        frame.setLayout(new GridLayout(0,2));
+        frame.setSize(800, 800);
+        frame.setLocation(300, 100);
+        frame.setLayout(new GridLayout(0, 2));
         JPanel panel1 = new JPanel();
         JPanel panel2 = new JPanel();
         JPanel panel3 = new JPanel();
