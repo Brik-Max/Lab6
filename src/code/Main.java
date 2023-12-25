@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Main {
+    // А это основная ветка main
     public static void main(String[] args) {
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
