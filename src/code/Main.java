@@ -23,6 +23,7 @@ public class Main {
         frame.add(panel3);
         frame.add(panel4);
         frame.setVisible(true);
+        //Коммит новой ветки
 
         Ball ball1 = new Ball(panel1,1,50,150,250);
         Ball ball2 = new Ball(panel2,2,10,120,320);
