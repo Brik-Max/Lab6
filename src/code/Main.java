@@ -29,7 +29,7 @@ public class Main {
         Ball ball2 = new Ball(panel2,2,10,120,320);
         Ball ball3 = new Ball(panel3,3,20,110,310);
         Ball ball4 = new Ball(panel4,4,20,110,210);
-
+        //новая строка
         ball1.start();
         ball2.start();
         ball3.start();
