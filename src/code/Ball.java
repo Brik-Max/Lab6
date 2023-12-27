@@ -8,7 +8,7 @@ public class Ball extends Thread {
     private JPanel panel;
     private int step;
 
-    private Direction direction = new Direction();
+    private Direction direction;
 
     private int size;
     private int x0;
@@ -20,8 +20,8 @@ public class Ball extends Thread {
         this.size = size;
         this.x0 = x0;
         this.y0 = y0;
-        direction.dir1 = Direction.Right;
-        direction.dir2 = Direction.Down;
+        direction.dir1 = Direction.Up;
+        direction.dir2 = Direction.Left;
     }
 
     @Override
@@ -34,7 +34,6 @@ public class Ball extends Thread {
         panel.setBackground(Color.GRAY);
         Graphics gr = panel.getGraphics();
         while(true){
-
             gr.setColor(Color.WHITE);
             gr.drawOval(x, y, size, size);
             try {
@@ -42,7 +41,6 @@ public class Ball extends Thread {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
             gr.setColor(Color.GRAY);
             gr.drawOval(x, y, size, size);
             if (x < 0 && Objects.equals(direction.dir1, Direction.Left)) {
