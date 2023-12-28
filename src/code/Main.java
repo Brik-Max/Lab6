@@ -6,11 +6,11 @@ import java.awt.*;
 public class Main {
     // -amend
     public static void main(String[] args) {
-        JFrame frame = new JFrame();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(800,800);
-        frame.setLocation(200,200);
-        frame.setLayout(new GridLayout(0,2));
+        JFrame simFrame = new JFrame();
+        simFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        simFrame.setSize(800, 800);
+        simFrame.setLocation(200, 200);
+        simFrame.setLayout(new GridLayout(0, 2));
         JPanel panel1 = new JPanel();
         JPanel panel2 = new JPanel();
         JPanel panel3 = new JPanel();
@@ -19,11 +19,11 @@ public class Main {
         panel2.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         panel3.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         panel4.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-        frame.add(panel1);
-        frame.add(panel2);
-        frame.add(panel3);
-        frame.add(panel4);
-        frame.setVisible(true);
+        simFrame.add(panel1);
+        simFrame.add(panel2);
+        simFrame.add(panel3);
+        simFrame.add(panel4);
+        simFrame.setVisible(true);
         //Коммит новой ветки
 
         Ball ball1 = new Ball(panel1, 1, 10, 15, 15);
